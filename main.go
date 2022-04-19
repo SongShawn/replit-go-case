@@ -14,6 +14,9 @@ func main() {
         case a >= 5 && a < 10:
         fmt.Println("a>=5 and a<10")
 
+        case a>=10 && a < 20:
+        fmt.Println("a>=10 and a < 20")
+        
         default:
         fmt.Println("default")
     }
