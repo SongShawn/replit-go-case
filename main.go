@@ -2,13 +2,19 @@ package main
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"io"
+	"math"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	ginCase()
+	mathDiv()
+}
+
+func mathDiv() {
+    fmt.Println(math.Ceil(1*1.0/3))
 }
 
 func ginCase() {
