@@ -5,6 +5,7 @@ import (
 	"io"
 	"math"
 	"net/http"
+	"time"
 
 	"github.com/gin-gonic/gin"
 )
@@ -12,6 +13,8 @@ import (
 type A struct {
 	a int
 }
+
+var c int
 
 func main() {
 	a := &A{}
@@ -22,7 +25,26 @@ func main() {
 	checkNil(b)
 	checkNil(nil)
 	checkNil(returnIntfNil())
-    checkNil(returnRealNil())
+	checkNil(returnRealNil())
+
+	
+
+	go func() {
+		for true {
+			c = 10
+			time.Sleep(1000)
+		}
+	}()
+
+    var aa = 1
+    if aa !=1 {
+        go func() {
+          for true {
+              c = 100
+              time.Sleep(1000)
+          }  
+        }()    
+    }
 }
 
 func returnIntfNil() interface{} {
@@ -32,7 +54,7 @@ func returnIntfNil() interface{} {
 }
 
 func returnRealNil() interface{} {
-    return nil
+	return nil
 }
 
 func checkNil(val interface{}) {
