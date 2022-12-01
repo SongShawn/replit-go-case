@@ -36,4 +36,9 @@ func main() {
 	json.Unmarshal(marshaledData, &data1)
 	fmt.Printf("AA %p, BB %p\r\n", data1.AA[1], data1.BB[1])
 	fmt.Println(string(marshaledData))
+
+
+    for k := range data.AA {
+        fmt.Println(k)
+    }
 }
