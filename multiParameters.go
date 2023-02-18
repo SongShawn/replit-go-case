@@ -15,4 +15,8 @@ func logWrap(format string, args ...interface{}) {
 
 func main() {
 	logWrap("%d %d", 1, 2)
+
+    var a map[int]string
+
+    fmt.Printf("len=%d\n", len(a))
 }
